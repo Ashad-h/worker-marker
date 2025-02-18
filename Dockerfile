@@ -18,8 +18,7 @@ COPY builder/requirements.txt /requirements.txt
 COPY builder/file.pdf /file.pdf
 RUN python3.11 -m pip install --upgrade pip && \
     python3.11 -m pip install --upgrade -r /requirements.txt --no-cache-dir && \
-    rm /requirements.txt && \
-    python3.11 -m marker_single /file.pdf 
+    rm /requirements.txt
 
 # NOTE: The base image comes with multiple Python versions pre-installed.
 #       It is reccommended to specify the version of Python when running your code.
