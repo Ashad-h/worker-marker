@@ -34,8 +34,7 @@ def handler(job):
     text, _, images = text_from_rendered(rendered)
 
     return {
-        "text": text,
-        "images": images,
+        "text": text
     }
 
 
